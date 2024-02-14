@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import './utils/style/style.css'
+import './style/style.css'
 import Home from './pages/Home'
 import Error from './components/Error'
 import Header from './components/Header'
@@ -17,7 +17,7 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/file" element={<File />} />
         <Route path="/about" element={<About />} />
-        <Route element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>

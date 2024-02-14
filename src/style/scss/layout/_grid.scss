@@ -1,0 +1,71 @@
+@use '../util' as u;
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 80px;
+}
+
+.NavLinks {
+  display: flex;
+  padding: 20px 0;
+  gap: 57px;
+}
+
+.FooterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FooterContainer img {
+  margin-top: 40px;
+}
+
+.TextFooter {
+  width: 513px;
+  height: 46px;
+  top: 134px;
+  left: 463px;
+  margin-top: 20px;
+}
+
+.ErrorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding: 80px 0;
+}
+
+.ErrorText {
+  width: 872px;
+  height: 51px;
+}
+
+.ErrorLink {
+  width: 284px;
+  height: 26px;
+}
+
+.Banner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-color);
+  border-radius: 25px;
+  margin: 0 80px;
+}
+
+.Banner img {
+  width: 100%;
+  height: 150px;
+  border-radius: 25px;
+  opacity: 60%;
+  object-fit: cover;
+}
+
+.BannerTitle {
+  position: absolute;
+  top: 175px;
+}

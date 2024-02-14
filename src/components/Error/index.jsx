@@ -1,5 +1,20 @@
+import { Link } from 'react-router-dom'
+import LogoError from '../../assets/Logo_error_desktop.png'
+
 function Error() {
-  return <p> Il semblerait que la page que vous cherchez n’existe pas </p>
+  return (
+    <div className="ErrorContainer">
+      <Link to="/">
+        <img src={LogoError} alt="Erreur 404" />
+      </Link>
+      <div className="ErrorText">
+        Oups! La page que vous demandez n'existe pas.
+      </div>
+      <div className="ErrorLink">
+        <Link to="/">Retourner sur la page d’accueil</Link>
+      </div>
+    </div>
+  )
 }
 
 export default Error
