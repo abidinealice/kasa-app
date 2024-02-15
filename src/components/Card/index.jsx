@@ -1,17 +1,16 @@
-import { useContext } from 'react'
-import { ItemsContext } from '../../utils/context'
+import PropTypes from 'prop-types'
 
-function Card() {
-  const { logementsList } = useContext(ItemsContext)
+function Card({ title, picture }) {
   return (
-    <div className="HomeContainer">
-      {logementsList.map(({ id, title }) => (
-        <div className="HomeCard" key={id}>
-          <div className="HomeCardText">{title}</div>
-        </div>
-      ))}
+    <div className="HomeCard">
+      <img src={picture} alt="Couverture"></img>
+      <div className="HomeCardText">{title}</div>
     </div>
   )
+}
+
+Card.propTypes = {
+  picture: PropTypes.string.isRequired,
 }
 
 export default Card

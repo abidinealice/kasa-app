@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './style/style.css'
 import Home from './pages/Home'
@@ -10,7 +10,7 @@ import About from './pages/About'
 import File from './pages/File'
 import { ItemsProvider } from './utils/context'
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <ItemsProvider>
@@ -25,5 +25,4 @@ ReactDOM.render(
       </ItemsProvider>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root'),
 )
