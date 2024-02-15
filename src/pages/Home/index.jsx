@@ -6,10 +6,7 @@ function Home() {
   return (
     <div>
       <Banner picture={BannerHome} title={'Chez vous, partout et ailleurs'} />
-      <p>C'est la page home</p>
-      <div className="HomeContainer">
-        <Card />
-      </div>
+      <Card />
     </div>
   )
 }

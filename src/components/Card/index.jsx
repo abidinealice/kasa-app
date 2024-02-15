@@ -3,9 +3,8 @@ import { ItemsContext } from '../../utils/context'
 
 function Card() {
   const { logementsList } = useContext(ItemsContext)
-  console.log(logementsList)
   return (
-    <div>
+    <div className="HomeContainer">
       {logementsList.map(({ id, title }) => (
         <div className="HomeCard" key={id}>
           <div className="HomeCardText">{title}</div>

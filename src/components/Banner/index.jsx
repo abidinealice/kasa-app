@@ -10,7 +10,6 @@ function Banner({ picture, title }) {
 }
 
 Banner.propTypes = {
-  title: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired,
 }
 
