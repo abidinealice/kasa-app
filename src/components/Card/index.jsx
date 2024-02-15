@@ -1,14 +1,14 @@
-import logements from '../../data/logements.json'
-import { useState } from 'react'
+import { useContext } from 'react'
+import { ItemsContext } from '../../utils/context'
 
 function Card() {
-  const [logementsList, setLogementsList] = useState(logements)
+  const { logementsList } = useContext(ItemsContext)
   console.log(logementsList)
   return (
     <div>
       {logementsList.map(({ id, title }) => (
         <div className="HomeCard" key={id}>
-          {title}
+          <div className="HomeCardText">{title}</div>
         </div>
       ))}
     </div>
