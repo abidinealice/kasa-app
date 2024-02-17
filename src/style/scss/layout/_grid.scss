@@ -137,4 +137,15 @@
 }
 
 .CollapseCardDpn {
+  animation: scrollDown 1s;
+  position: relative;
+}
+
+@keyframes scrollDown {
+  0% {
+    top: -15px;
+  }
+  100% {
+    top: 0;
+  }
 }
