@@ -1,37 +1,31 @@
 import { useState } from 'react'
-import aboutkasa from '../../data/aboutkasa.json'
-import ArrowUp from '../../assets/ArrowUp.png'
-import ArrowDown from '../../assets/ArrowDown.png'
+import PropTypes from 'prop-types'
+import Arrow from '../../assets/ArrowDown.png'
 
-function Collapse() {
+function Collapse({ category, description }) {
   const [isOpen, setIsOpen] = useState(false)
   const openDescripton = () => {
-    setIsOpen(true)
-  }
-  const closeDescripton = () => {
-    setIsOpen(false)
+    setIsOpen(!isOpen)
   }
   return (
     <div className="CollapseContainer">
-      {aboutkasa.map(({ id, category, description }) => (
-        <div key={id}>
-          <div className="CollapseCard">
-            <div className="CollapseCardText">{category}</div>
-            {isOpen ? (
-              <button className="CollapseCardBtn" onClick={closeDescripton}>
-                <img src={ArrowDown} alt="Fleche vers le bas" />
-              </button>
-            ) : (
-              <button className="CollapseCardBtn" onClick={openDescripton}>
-                <img src={ArrowUp} alt="Fleche vers le haut" />
-              </button>
-            )}
-          </div>
-          {isOpen && <div className="CollapseCardDpn">{description}</div>}
-        </div>
-      ))}
+      <div className="CollapseCard">
+        <div className="CollapseCardText">{category}</div>
+        <button className="CollapseCardBtn" onClick={openDescripton}>
+          {isOpen ? (
+            <img src={Arrow} alt="Fleche vers le haut" className="arrow-up" />
+          ) : (
+            <img src={Arrow} alt="Fleche vers le bas" className="arrow-down" />
+          )}
+        </button>
+      </div>
+      {isOpen && <div className="CollapseCardDpn">{description}</div>}
     </div>
   )
+}
+
+Collapse.propTypes = {
+  category: PropTypes.string.isRequired,
 }
 
 export default Collapse
