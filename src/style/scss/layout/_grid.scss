@@ -49,13 +49,6 @@
 //         COLLAPSE
 // ----------------------
 
-.AboutContainer .CollapseContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 40px 170px;
-}
-
 .CollapseCard {
   display: flex;
   justify-content: space-between;
@@ -169,6 +162,13 @@
   margin: 0 100px;
 }
 
+.AboutContainer .CollapseContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 40px 170px;
+}
+
 // ----------------------
 //         FILE
 // ----------------------
@@ -266,4 +266,57 @@
   padding: 56px 50px;
   background-color: var(--background-color);
   border-radius: 25px;
+}
+
+// ----------------------
+//         SLIDESHOW
+// ----------------------
+
+.SlideShowContainer {
+}
+
+.SlideShowCar {
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+}
+
+.SlideShowButtonL {
+  width: 46.68px;
+  height: 79.2px;
+  position: absolute;
+  top: 388.4px;
+  left: 120.36px;
+  background-color: #ffffff00;
+  border: none;
+  cursor: pointer;
+}
+
+.SlideShowButtonR {
+  width: 46.68px;
+  height: 79.2px;
+  position: absolute;
+  top: 388.4px;
+  right: 120.36px;
+  background-color: #ffffff00;
+  border: none;
+  cursor: pointer;
+}
+
+.SlideShowButtonL img {
+  width: 46.68px;
+  height: 79.2px;
+}
+
+.SlideShowButtonR img {
+  width: 46.68px;
+  height: 79.2px;
+}
+
+.SlideShowCounter {
+  width: 24px;
+  height: 32.4px;
+  position: absolute;
+  top: 357.67px;
+  left: 607px;
 }

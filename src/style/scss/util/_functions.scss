@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+@function rem($pixeL) {
+  //on retourne la conversion de pixel en rem
+  // erreur lorsqu'il y a un probleme
+  @if math.is-unitless($pixeL) {
+    // on divise par 16 pour convertir en rem
+    @return math.div($pixeL, 16) + rem;
+  }
+  //si $pixeL n'est pas écrit correctement, erreur
+  @else {
+    @error "Don\'t use unit when using rem() function; only numbers!";
+  }
+}
+
+@function em($pixeL) {
+  //on retourne la conversion de pixel en em
+  // erreur lorsqu'il y a un probleme
+  @if math.is-unitless($pixeL) {
+    // on divise par 16 pour convertir en em
+    @return math.div($pixeL, 16) + em;
+    //si $pixeL n'est pas écrit correctement, erreur
+  } @else {
+    @error "Don\'t use unit when using em() function; only numbers!";
+  }
+}
