@@ -5,7 +5,7 @@ import aboutkasa from '../../data/aboutkasa.json'
 
 function Home() {
   return (
-    <div>
+    <div className="AboutContainer">
       <Banner picture={BannerAbout} />
       {aboutkasa.map(({ id, category, description }) => (
         <Collapse key={id} category={category} description={description} />

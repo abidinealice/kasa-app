@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 
 function Card({ title, picture }) {
   return (
-    <div className="HomeCard">
+    <div className="Card">
       <img src={picture} alt="Couverture"></img>
-      <div className="HomeCardText">{title}</div>
+      <div className="CardText">{title}</div>
     </div>
   )
 }

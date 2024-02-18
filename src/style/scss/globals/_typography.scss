@@ -1,31 +1,51 @@
-.NavLinks {
+// ----------------------
+//         BANNER
+// ----------------------
+
+.BannerTitle {
+  position: absolute;
+  top: 205px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: 0em;
+  text-align: left;
   color: var(--text-color);
+}
+
+// ----------------------
+//         CARD
+// ----------------------
+
+.CardText {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text-color);
+}
+
+// ----------------------
+//         COLLAPSE
+// ----------------------
+
+.CollapseCardText {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 34px;
   letter-spacing: 0em;
-  text-align: right;
-  text-decoration: none;
-}
-
-.NavLinks a,
-a:visited {
-  color: var(--text-color);
-  text-decoration-color: var(--text-decoration-color);
-}
-
-.FooterContainer {
-  background-color: var(--background-color);
-}
-
-.TextFooter {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 34px;
-  letter-spacing: 0em;
-  text-align: center;
+  text-align: left;
   color: var(--text-color);
 }
+
+.CollapseCardDpn {
+  color: var(--text-color);
+}
+
+// ----------------------
+//         ERROR
+// ----------------------
 
 .ErrorText {
   font-size: 36px;
@@ -45,36 +65,35 @@ a:visited {
   color: var(--text-color);
 }
 
-.BannerTitle {
-  position: absolute;
-  top: 175px;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 68px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: var(--text-color);
-}
+// ----------------------
+//         FOOTER
+// ----------------------
 
-.HomeCardText {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: var(--text-color);
-}
-
-.CollapseCardText {
+.TextFooter {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 34px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: center;
   color: var(--text-color);
 }
 
-.CollapseCardDpn {
-  padding: 0px 10px;
+// ----------------------
+//         HEADER
+// ----------------------
+
+.NavLinks {
   color: var(--text-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: right;
+  text-decoration: none;
+}
+
+.NavLinks a,
+a:visited {
+  color: var(--text-color);
+  text-decoration-color: var(--text-decoration-color);
 }

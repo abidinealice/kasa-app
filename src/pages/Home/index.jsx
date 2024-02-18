@@ -1,17 +1,18 @@
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
 import BannerHome from '../../assets/Banner_home.png'
-import { useContext } from 'react'
-import { ItemsContext } from '../../utils/context'
+import { Link } from 'react-router-dom'
+import logements from '../../data/logements.json'
 
 function Home() {
-  const { logementsList } = useContext(ItemsContext)
   return (
-    <div>
+    <div className="HomeContainer">
       <Banner picture={BannerHome} title={'Chez vous, partout et ailleurs'} />
-      <div className="HomeContainer">
-        {logementsList.map(({ id, title, cover }) => (
-          <Card key={id} title={title} picture={cover} />
+      <div className="HomeCardContainer">
+        {logements.map(({ id, title, cover }, index) => (
+          <Link to={`file/${index}`} key={id}>
+            <Card title={title} picture={cover} />
+          </Link>
         ))}
       </div>
     </div>
