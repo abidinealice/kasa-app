@@ -1,4 +1,5 @@
 import Collapse from '../../components/Collapse'
+import SlideShow from '../../components/SlideShow'
 import StarA from '../../assets/Star_active.png'
 import StarI from '../../assets/Star_inactive.png'
 import logements from '../../data/logements.json'
@@ -12,6 +13,7 @@ function File() {
   const equipments = logements[pageId].equipments
   return (
     <div className="FileContainer">
+      <SlideShow />
       <img src="" alt="Photos propriétés" className="FilePictures" />
 
       <div className="FileCont">
