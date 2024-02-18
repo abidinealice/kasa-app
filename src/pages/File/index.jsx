@@ -34,7 +34,7 @@ function File() {
               className="FileOwnerPic"
             />
           </div>
-          <p className="FileRating">
+          <div className="FileRating">
             {range.map((rangeElem) =>
               parseInt(rating) >= rangeElem ? (
                 <span key={rangeElem.toString()}>
@@ -46,7 +46,7 @@ function File() {
                 </span>
               ),
             )}
-          </p>
+          </div>
         </div>
       </div>
       <div className="FileCollapseContainer">

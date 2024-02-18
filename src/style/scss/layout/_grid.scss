@@ -180,21 +180,52 @@
 .FileCont {
   display: flex;
   justify-content: space-between;
+  margin: 30px 0 24px 0;
+}
+
+.FileCont2 {
+  display: flex;
+  flex-direction: column;
 }
 
 .FileOwner {
   display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.FileOwnerPic {
+  width: 64px;
+  height: 64px;
+  top: 602px;
+  left: 1273px;
+
+  border-radius: 50%;
 }
 
 .FileTags {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.FileTags span {
+  width: 115px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.FileRating {
+  width: 196px;
+  height: 36px;
+  top: 687px;
+  left: 1144px;
+  text-align: end;
+  margin-top: 21px;
 }
 
 .FileCollapseContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
 }
 
 .FileCollapseContainer .CollapseContainer {
