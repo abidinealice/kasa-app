@@ -51,10 +51,21 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
 .CollapseCardDpn {
   color: var(--text-color);
+  @include u.breakpoints(small) {
+    font-size: 13px;
+  }
 }
 
 // ----------------------
@@ -159,6 +170,14 @@ a:visited {
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
 .FileAddress {
@@ -168,6 +187,14 @@ a:visited {
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
 .FileTags span {
@@ -178,6 +205,14 @@ a:visited {
   text-align: center;
   color: var(--text-color);
   background-color: var(--background-color);
+
+  @include u.breakpoints(small) {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
 }
 
 .FileOwnerName {
@@ -187,4 +222,13 @@ a:visited {
   letter-spacing: 0em;
   text-align: right;
   color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: right;
+    width: 50px;
+  }
 }
