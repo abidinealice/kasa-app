@@ -1,16 +1,23 @@
+@use '../util' as u;
+
 // ----------------------
 //         BANNER
 // ----------------------
 
 .BannerTitle {
-  position: absolute;
-  top: 205px;
   font-size: 48px;
   font-weight: 700;
   line-height: 68px;
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color);
+  @include u.breakpoints(small) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
 // ----------------------
@@ -24,6 +31,13 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color);
+  @include u.breakpoints(small) {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
 // ----------------------
@@ -54,6 +68,14 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
 }
 
 .ErrorLink {
@@ -63,6 +85,14 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
 // ----------------------
@@ -76,6 +106,13 @@
   letter-spacing: 0em;
   text-align: center;
   color: var(--text-color);
+  @include u.breakpoints(small) {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
 }
 
 // ----------------------
@@ -90,6 +127,19 @@
   letter-spacing: 0em;
   text-align: right;
   text-decoration: none;
+
+  @include u.breakpoints(small) {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+}
+
+.NavLinks a:hover {
+  text-decoration: underline;
 }
 
 .NavLinks a,
