@@ -12,6 +12,7 @@ function File() {
   const tags = logements[pageId].tags
   const equipments = logements[pageId].equipments
   const pictures = logements[pageId].pictures
+
   return (
     <div className="FileContainer">
       <SlideShow picture={pictures} total={pictures} />

@@ -299,7 +299,7 @@
   position: absolute;
   top: 388.4px;
   right: 120.36px;
-  background-color: #ffffff00;
+  background-color: var(--background-color);
   border: none;
   cursor: pointer;
 }
@@ -320,5 +320,5 @@
   position: absolute;
   top: 583.67px;
   left: 50%;
-  color: rgb(255, 0, 0);
+  color: var(--text-color);
 }

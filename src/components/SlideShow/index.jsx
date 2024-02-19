@@ -16,21 +16,25 @@ function SlideShow({ picture, total }) {
         alt="Photos propriétés"
         className="SlideShowGallery"
       ></img>
-      <button
-        className="SlideShowButtonL"
-        onClick={count === 0 ? lastPic : previousPic}
-      >
-        <img src={ArrowLeft} alt="Fleche gauche" />
-      </button>
-      <button
-        className="SlideShowButtonR"
-        onClick={count === total.length - 1 ? firstPic : nextPic}
-      >
-        <img src={ArrowRight} alt="Fleche droit" />
-      </button>
-      <span className="SlideShowCounter">
-        {count + 1}/{total.length}
-      </span>
+      {total.length > 1 && (
+        <div>
+          <button
+            className="SlideShowButtonL"
+            onClick={count === 0 ? lastPic : previousPic}
+          >
+            <img src={ArrowLeft} alt="Fleche gauche" />
+          </button>
+          <button
+            className="SlideShowButtonR"
+            onClick={count === total.length - 1 ? firstPic : nextPic}
+          >
+            <img src={ArrowRight} alt="Fleche droit" />
+          </button>
+          <span className="SlideShowCounter">
+            {count + 1}/{total.length}
+          </span>
+        </div>
+      )}
       {console.log(count)}
     </div>
   )
