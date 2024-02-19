@@ -6,6 +6,8 @@ function SlideShow({ picture, total }) {
   const [count, setCount] = useState(0)
   const previousPic = () => setCount(count - 1)
   const nextPic = () => setCount(count + 1)
+  const firstPic = () => setCount(0)
+  const lastPic = () => setCount(total.length - 1)
 
   return (
     <div className="SlideShowContainer">
@@ -14,14 +16,20 @@ function SlideShow({ picture, total }) {
         alt="Photos propriétés"
         className="SlideShowGallery"
       ></img>
-      <button className="SlideShowButtonL" onClick={count >= 1 && previousPic}>
+      <button
+        className="SlideShowButtonL"
+        onClick={count === 0 ? lastPic : previousPic}
+      >
         <img src={ArrowLeft} alt="Fleche gauche" />
       </button>
-      <button className="SlideShowButtonR" onClick={nextPic}>
+      <button
+        className="SlideShowButtonR"
+        onClick={count === total.length - 1 ? firstPic : nextPic}
+      >
         <img src={ArrowRight} alt="Fleche droit" />
       </button>
       <span className="SlideShowCounter">
-        {count + 1}/{total}
+        {count + 1}/{total.length}
       </span>
       {console.log(count)}
     </div>

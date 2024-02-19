@@ -14,7 +14,7 @@ function File() {
   const pictures = logements[pageId].pictures
   return (
     <div className="FileContainer">
-      <SlideShow picture={pictures} total={pictures.length} />
+      <SlideShow picture={pictures} total={pictures} />
 
       <div className="FileCont">
         <div className="FileCont1">
