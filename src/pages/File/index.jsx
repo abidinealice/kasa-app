@@ -11,10 +11,10 @@ function File() {
   const rating = logements[pageId].rating
   const tags = logements[pageId].tags
   const equipments = logements[pageId].equipments
+  const pictures = logements[pageId].pictures
   return (
     <div className="FileContainer">
-      <SlideShow />
-      <img src="" alt="Photos propriétés" className="FilePictures" />
+      <SlideShow picture={pictures} total={pictures.length} />
 
       <div className="FileCont">
         <div className="FileCont1">
