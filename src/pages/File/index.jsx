@@ -21,8 +21,6 @@ function File() {
     const tags = logements[pageId].tags
     const equipments = logements[pageId].equipments
     const pictures = logements[pageId].pictures
-    console.log(pageId)
-    console.log(logements)
 
     return (
       <div className="FileContainer">
@@ -51,11 +49,11 @@ function File() {
               {range.map((rangeElem) =>
                 parseInt(rating) >= rangeElem ? (
                   <span key={rangeElem.toString()}>
-                    <img src={StarA} alt="water-icon" />
+                    <img src={StarA} alt="Icon étoile active" />
                   </span>
                 ) : (
                   <span key={rangeElem.toString()}>
-                    <img src={StarI} alt="star-icon" />
+                    <img src={StarI} alt="Icon étoile inactive" />
                   </span>
                 ),
               )}

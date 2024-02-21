@@ -35,7 +35,6 @@ function SlideShow({ picture, total }) {
           </span>
         </div>
       )}
-      {console.log(count)}
     </div>
   )
 }
