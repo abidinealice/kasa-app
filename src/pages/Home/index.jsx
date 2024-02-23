@@ -9,8 +9,8 @@ function Home() {
     <div className="HomeContainer">
       <Banner picture={BannerHome} title={'Chez vous, partout et ailleurs'} />
       <div className="HomeCardContainer">
-        {logements.map(({ id, title, cover }, index) => (
-          <Link to={`file/${index}`} key={id}>
+        {logements.map(({ id, title, cover }) => (
+          <Link to={`file/${id}`} key={id}>
             <Card title={title} picture={cover} />
           </Link>
         ))}

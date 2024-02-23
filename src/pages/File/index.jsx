@@ -1,34 +1,36 @@
 import Collapse from '../../components/Collapse'
 import SlideShow from '../../components/SlideShow'
-import StarA from '../../assets/Star_active.png'
-import StarI from '../../assets/Star_inactive.png'
 import logements from '../../data/logements.json'
 import { useParams } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
+import Rating from '../../components/Rating'
 
 function File() {
   const { pageId } = useParams()
+  const idLogements = logements.find((idLogement) => idLogement.id === pageId)
+  const idIndexLogement = logements.findIndex(
+    (idIndexLogement) => idIndexLogement.id === pageId,
+  )
 
-  if (pageId > 19) {
+  if (!idLogements) {
     return (
       <div>
         <Navigate to="/error" />
       </div>
     )
   } else {
-    const range = [1, 2, 3, 4, 5]
-    const rating = logements[pageId].rating
-    const tags = logements[pageId].tags
-    const equipments = logements[pageId].equipments
-    const pictures = logements[pageId].pictures
+    const rating = logements[idIndexLogement].rating
+    const tags = logements[idIndexLogement].tags
+    const equipments = logements[idIndexLogement].equipments
+    const pictures = logements[idIndexLogement].pictures
 
     return (
       <div className="FileContainer">
         <SlideShow picture={pictures} total={pictures} />
         <div className="FileCont">
           <div className="FileCont1">
-            <p className="FileTitle">{logements[pageId].title}</p>
-            <p className="FileAddress">{logements[pageId].location}</p>
+            <p className="FileTitle">{logements[idIndexLogement].title}</p>
+            <p className="FileAddress">{logements[idIndexLogement].location}</p>
             <div className="FileTags">
               {tags.map((tags) => (
                 <span key={tags.toString()}>{tags}</span>
@@ -38,32 +40,24 @@ function File() {
 
           <div className="FileCont2">
             <div className="FileOwner">
-              <p className="FileOwnerName">{logements[pageId].host.name}</p>
+              <p className="FileOwnerName">
+                {logements[idIndexLogement].host.name}
+              </p>
               <img
-                src={logements[pageId].host.picture}
+                src={logements[idIndexLogement].host.picture}
                 alt="Propriétaire"
                 className="FileOwnerPic"
               />
             </div>
             <div className="FileRating">
-              {range.map((rangeElem) =>
-                parseInt(rating) >= rangeElem ? (
-                  <span key={rangeElem.toString()}>
-                    <img src={StarA} alt="Icon étoile active" />
-                  </span>
-                ) : (
-                  <span key={rangeElem.toString()}>
-                    <img src={StarI} alt="Icon étoile inactive" />
-                  </span>
-                ),
-              )}
+              <Rating ratings={rating} />
             </div>
           </div>
         </div>
         <div className="FileCollapseContainer">
           <Collapse
             category="Description"
-            description={logements[pageId].description}
+            description={logements[idIndexLogement].description}
           />
           <Collapse
             category="Equipements"
