@@ -1,5 +1,11 @@
 @use '../util' as u;
 
+.bodyContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 // ----------------------
 //         BANNER
 // ----------------------
@@ -159,6 +165,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--background-color);
+  margin-top: auto;
 }
 
 .FooterContainer img {
@@ -315,7 +322,6 @@
 
 .AboutContainer {
   margin: 0 100px;
-  height: 100vh;
   @include u.breakpoints(small) {
     margin: 0 19.5px;
   }
@@ -333,7 +339,6 @@
 
 .FileContainer {
   margin: 50px 100px;
-  height: 100vh;
   @include u.breakpoints(small) {
     margin: 27px 20px;
   }

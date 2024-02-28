@@ -7,30 +7,24 @@ import Rating from '../../components/Rating'
 
 function File() {
   const { pageId } = useParams()
-  const idLogements = logements.find((idLogement) => idLogement.id === pageId)
-  const idIndexLogement = logements.findIndex(
-    (idIndexLogement) => idIndexLogement.id === pageId,
-  )
+  const logement = logements.find((logement) => logement.id === pageId)
+  console.log(logement)
 
-  if (!idLogements) {
+  if (!logement) {
     return (
       <div>
         <Navigate to="/error" />
       </div>
     )
   } else {
-    const rating = logements[idIndexLogement].rating
-    const tags = logements[idIndexLogement].tags
-    const equipments = logements[idIndexLogement].equipments
-    const pictures = logements[idIndexLogement].pictures
-
+    const tags = logement.tags
     return (
       <div className="FileContainer">
-        <SlideShow picture={pictures} total={pictures} />
+        <SlideShow picture={logement.pictures} total={logement.pictures} />
         <div className="FileCont">
           <div className="FileCont1">
-            <p className="FileTitle">{logements[idIndexLogement].title}</p>
-            <p className="FileAddress">{logements[idIndexLogement].location}</p>
+            <p className="FileTitle">{logement.title}</p>
+            <p className="FileAddress">{logement.location}</p>
             <div className="FileTags">
               {tags.map((tags) => (
                 <span key={tags.toString()}>{tags}</span>
@@ -40,28 +34,23 @@ function File() {
 
           <div className="FileCont2">
             <div className="FileOwner">
-              <p className="FileOwnerName">
-                {logements[idIndexLogement].host.name}
-              </p>
+              <p className="FileOwnerName">{logement.host.name}</p>
               <img
-                src={logements[idIndexLogement].host.picture}
+                src={logement.host.picture}
                 alt="Propriétaire"
                 className="FileOwnerPic"
               />
             </div>
             <div className="FileRating">
-              <Rating ratings={rating} />
+              <Rating ratings={logement.rating} />
             </div>
           </div>
         </div>
         <div className="FileCollapseContainer">
-          <Collapse
-            category="Description"
-            description={logements[idIndexLogement].description}
-          />
+          <Collapse category="Description" description={logement.description} />
           <Collapse
             category="Equipements"
-            description={equipments.map((equips) => (
+            description={logement.equipments.map((equips) => (
               <span key={equips.toString()}>{equips}</span>
             ))}
           />
