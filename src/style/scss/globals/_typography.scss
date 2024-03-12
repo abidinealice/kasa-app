@@ -149,14 +149,17 @@
   }
 }
 
-.NavLinks a:hover {
-  text-decoration: underline;
-}
-
 .NavLinks a,
 a:visited {
   color: var(--text-color);
   text-decoration-color: var(--text-decoration-color);
+}
+
+.NavLinks_home a:hover,
+.NavLinks_about a:hover,
+.NavLinks_home a:focus,
+.NavLinks_about a:focus {
+  text-decoration: underline;
 }
 
 // ----------------------

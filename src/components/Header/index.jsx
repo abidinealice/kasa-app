@@ -8,8 +8,12 @@ function Header() {
         <img src={LogoDesktop} alt="Logo Kasa" />
       </Link>
       <div className="NavLinks">
-        <Link to="/">Accueil</Link>
-        <Link to="/about">A Propos</Link>
+        <div className="NavLinks_home">
+          <Link to="/">Accueil</Link>
+        </div>
+        <div className="NavLinks_about">
+          <Link to="/about">A Propos</Link>
+        </div>
       </div>
     </div>
   )
