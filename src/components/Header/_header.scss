@@ -1,0 +1,55 @@
+@use '../../style/scss/util/' as u;
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 100px;
+  @include u.breakpoints(small) {
+    margin: 20px 20px 27px 20px;
+  }
+}
+
+.HeaderContainer img {
+  width: 210.32px;
+  height: 68px;
+  @include u.breakpoints(small) {
+    width: 145px;
+    height: 46.88px;
+  }
+}
+
+.NavLinks {
+  display: flex;
+  padding: 20px 0;
+  gap: 57px;
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: right;
+  text-decoration: none;
+  @include u.breakpoints(small) {
+    gap: 26px;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+}
+
+.NavLinks a,
+a:visited {
+  color: var(--text-color);
+  text-decoration-color: var(--text-decoration-color);
+}
+
+.NavLinks_home a:hover,
+.NavLinks_about a:hover,
+.NavLinks_home a:focus,
+.NavLinks_about a:focus {
+  text-decoration: underline;
+}

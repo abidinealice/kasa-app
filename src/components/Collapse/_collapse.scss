@@ -1,0 +1,61 @@
+@use '../../style/scss/util/' as u;
+
+.CollapseCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px 8px 15px;
+  border-radius: 5px;
+  background-color: var(--background-color);
+}
+
+.CollapseCardText {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.CollapseCardBtn {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--background-color);
+}
+
+.CollapseCardBtn .arrow-up {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+.CollapseCardBtn .arrow-down {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.CollapseCardDpn {
+  padding: 15px 16px 0 20px;
+  animation: scrollDown 0.5s;
+  position: relative;
+  color: var(--text-color);
+  @include u.breakpoints(small) {
+    font-size: 13px;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    top: -15px;
+  }
+  100% {
+    top: 0;
+  }
+}

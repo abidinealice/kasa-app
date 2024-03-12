@@ -8,7 +8,6 @@ import Rating from '../../components/Rating'
 function File() {
   const { pageId } = useParams()
   const logement = logements.find((logement) => logement.id === pageId)
-  console.log(logement)
 
   if (!logement) {
     return (

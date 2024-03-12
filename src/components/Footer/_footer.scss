@@ -1,0 +1,45 @@
+@use '../../style/scss/util/' as u;
+
+.FooterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  margin-top: auto;
+}
+
+.FooterContainer img {
+  margin-top: 66px;
+  @include u.breakpoints(small) {
+    width: 122px;
+    height: 39.44px;
+  }
+}
+
+.TextFooter {
+  width: 513px;
+  height: 46px;
+  top: 134px;
+  left: 463px;
+  margin-top: 28.56px;
+  margin-bottom: 29px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--text-color);
+  @include u.breakpoints(small) {
+    width: 133.59px;
+    height: 46px;
+    top: 105px;
+    left: 121.09px;
+    margin-top: 5px;
+    margin-bottom: 58px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}

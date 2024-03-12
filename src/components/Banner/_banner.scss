@@ -1,0 +1,43 @@
+@use '../../style/scss/util/' as u;
+
+.Banner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-color);
+  border-radius: 25px;
+}
+
+.Banner img {
+  width: 100%;
+  height: 150px;
+  border-radius: 25px;
+  opacity: 60%;
+  object-fit: cover;
+  @include u.breakpoints(small) {
+    width: 100%;
+    height: 111px;
+  }
+}
+
+.BannerTitle {
+  position: absolute;
+  top: 215px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text-color);
+  @include u.breakpoints(small) {
+    width: 225px;
+    height: 48px;
+    top: 135px;
+    left: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}

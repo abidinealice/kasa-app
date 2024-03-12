@@ -1,0 +1,14 @@
+@use '../../style/scss/util/' as u;
+
+.AboutContainer {
+  margin: 0 100px;
+  @include u.breakpoints(small) {
+    margin: 0 19.5px;
+  }
+}
+
+.AboutContainer .CollapseContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}

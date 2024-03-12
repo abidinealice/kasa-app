@@ -1,0 +1,187 @@
+@use '../../style/scss/util/' as u;
+
+.FileContainer {
+  margin: 50px 100px;
+  @include u.breakpoints(small) {
+    margin: 27px 20px;
+  }
+}
+
+.FileCont {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 24px 0;
+
+  @include u.breakpoints(small) {
+    flex-direction: column;
+    margin: 15px 0 0 0;
+  }
+}
+
+.FileCont2 {
+  display: flex;
+  flex-direction: column;
+  @include u.breakpoints(small) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.FileOwner {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: end;
+}
+
+.FileOwnerName {
+  width: 93px;
+  height: 52px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: var(--text-color);
+  @include u.breakpoints(small) {
+    width: 59px;
+    height: 33px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: right;
+    width: 50px;
+  }
+}
+
+.FileOwnerPic {
+  width: 64px;
+  height: 64px;
+  top: 602px;
+  left: 1273px;
+  border-radius: 50%;
+  @include u.breakpoints(small) {
+    width: 32px;
+    height: 32px;
+    top: 0.5px;
+    left: 103.5px;
+  }
+}
+
+.FileTags {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+
+  @include u.breakpoints(small) {
+    margin-top: 10px;
+  }
+}
+.FileTags span {
+  width: 115px;
+  height: 25px;
+  border-radius: 10px;
+
+  @include u.breakpoints(small) {
+    width: 84px;
+    height: 18px;
+    line-height: 18px;
+  }
+}
+
+.FileRating {
+  width: 196px;
+  height: 36px;
+  top: 687px;
+  left: 1144px;
+  text-align: end;
+  margin-top: 21px;
+
+  @include u.breakpoints(small) {
+    text-align: start;
+    margin-top: 24px;
+  }
+}
+
+.FileRating img {
+  @include u.breakpoints(small) {
+    width: 18px;
+  }
+}
+
+.FileCollapseContainer {
+  display: flex;
+  gap: 76px;
+
+  @include u.breakpoints(small) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.FileCollapseContainer .CollapseContainer {
+  width: 582px;
+
+  @include u.breakpoints(small) {
+    width: 100%;
+  }
+}
+
+.FileCollapseContainer .CollapseCardDpn {
+  display: flex;
+  flex-direction: column;
+}
+
+.FileTitle {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.FileAddress {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text-color);
+
+  @include u.breakpoints(small) {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.FileTags span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  @include u.breakpoints(small) {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}

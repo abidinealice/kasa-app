@@ -1,3 +1,14 @@
 @forward 'globals';
-@forward 'layout';
 @forward 'util';
+
+@import url('../../components/Banner/_banner.scss');
+@import url('../../components/Card/_card.scss');
+@import url('../../components/Collapse/_collapse.scss');
+@import url('../../components/Error/_error.scss');
+@import url('../../components/Footer/_footer.scss');
+@import url('../../components/Header/_header.scss');
+@import url('../../components/SlideShow/_slideshow.scss');
+@import url('../../pages/About/_about.scss');
+@import url('../../pages/File/_file.scss');
+@import url('../../pages/Home/_home.scss');
+@import url('../../rooter/Rooter/rooter.scss');
